@@ -24,7 +24,7 @@ function compareAnswers(candidateAnswers, correctAnswers) {
 }
 
 function grading(number) {
-   return ((number / 5) * 100);
+   return number / 5 * 100;
 }
 
 
@@ -45,19 +45,7 @@ function askQuestion() {
 
 function gradeQuiz(candidateAnswers) {
 
-function compareAnswers(candidateAnswers, correctAnswers) {
-  let correct = 0;
-  for  (let i = 0; i < correctAnswers.length; i++) {
-    if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
-      correct += 1;
-    }
-  }
-  return correct;
-}
 
-function grading(number) {
-   return ((number / 5) * 100);
-}
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 console.log("\nCandidate Name: " + candidateName);

@@ -7,9 +7,9 @@ let correctAnswers = ["Sally Ride", "true", "40", "Trajectory", "3"];
 // TODO 1.1a: Define candidateName // 
 let candidateName = "";
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
-let question;
-let candidateAnswer;
-let correctAnswer;
+let question = "Who was the first American woman in space? ";
+let candidateAnswer = "";
+let correctAnswer = "Sally Ride";
 let candidateAnswers = [];
 
 

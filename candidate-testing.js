@@ -13,18 +13,18 @@ let correctAnswer = "Sally Ride";
 let candidateAnswers = [];
 
 
-function compareAnswers(candidateAnswers, correctAnswers) {
+function compareAnswers(array1, array2) {
   let correct = 0;
-  for  (let i = 0; i < correctAnswers.length; i++) {
-    if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
+  for  (let i = 0; i < array2.length; i++) {
+    if (array1[i].toLowerCase() === array2[i].toLowerCase()) {
       correct += 1;
     }
   }
   return correct;
 }
 
-function grading(number) {
-   return number / 5 * 100;
+function percentage(number) {
+   return number / correctAnswers.length * 100;
 }
 
 
@@ -55,10 +55,10 @@ for (let i = 0; i < questions.length; i++) {
 }
 
 let amountRight = compareAnswers(candidateAnswers, correctAnswers);
-let grade = grading(amountRight);
+let grade = percentage(amountRight);
 
-console.log(`>>> Overall Grade: ${grade}% (${amountRight} of 5 responses correct) <<<`);
-if (grade === 80 || grade === 100) {
+console.log(`>>> Overall Grade: ${grade}% (${amountRight} of ${correctAnswers.length} responses correct) <<<`);
+if (grade >= 80) {
   console.log(`>>> Status: PASSED <<<`);
 } else {
   console.log(`>>> Status: FAILED <<<`);

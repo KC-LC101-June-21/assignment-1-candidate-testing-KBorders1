@@ -40,8 +40,6 @@ function askQuestion() {
     candidateAnswer = input.question(questions[i]);
     candidateAnswers.push(candidateAnswer);
   }
-
-
 }
 
 
@@ -78,7 +76,7 @@ if (grade === 80 || grade === 100) {
   console.log(`>>> Status: FAILED <<<`);
 }
 
-
+  return grade;
 }
 
 function runProgram() {
